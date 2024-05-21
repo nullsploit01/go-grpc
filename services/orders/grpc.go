@@ -5,6 +5,8 @@ import (
 	"log"
 	"net"
 
+	handler "github.com/nullsploit01/go-microservice/kitchen/services/orders/handler/orders"
+	"github.com/nullsploit01/go-microservice/kitchen/services/orders/service"
 	"google.golang.org/grpc"
 )
 
@@ -24,6 +26,9 @@ func (s *gRPCServer) Run() error {
 	}
 
 	grpcServer := grpc.NewServer()
+
+	orderServcice := service.NewOrderService()
+	handler.NewGrpcOrdersService(grpcServer, orderServcice)
 
 	log.Println("Starting gRPC Server on %w", s.addr)
 
