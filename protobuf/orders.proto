@@ -1,4 +1,4 @@
-syntax = "proto3"
+syntax = "proto3";
 
 option go_package = "github.com/nullsploit01/go-microservice/common/orders";
 
@@ -25,7 +25,7 @@ message CreateOrderResponse {
     string status = 1;
 }
 
-message GetOrdersRequest = {
+message GetOrdersRequest {
     int32 customerId = 1;
 }
 
