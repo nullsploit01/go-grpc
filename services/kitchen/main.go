@@ -18,5 +18,6 @@ func NewGRPCClient(addr string) *grpc.ClientConn {
 }
 
 func main() {
-
+	httpServer := NewHttpServer(":8080")
+	httpServer.Run()
 }

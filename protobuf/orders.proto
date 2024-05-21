@@ -3,9 +3,8 @@ syntax = "proto3";
 option go_package = "github.com/nullsploit01/go-microservice/common/orders";
 
 service OrderService {
-    rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse){
-
-    }
+    rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse){}
+    rpc GetOrders(GetOrdersRequest) returns (GetOrderResponse){}
 }
 
 message CreateOrderRequest {

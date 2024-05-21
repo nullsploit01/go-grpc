@@ -17,6 +17,9 @@ func NewOrderService() *OrderService {
 
 func (s *OrderService) CreateOrder(ctx context.Context, order *orders.Order) error {
 	ordersList = append(ordersList, order)
-
 	return nil
+}
+
+func (s *OrderService) GetOrders(ctx context.Context) []*orders.Order {
+	return ordersList
 }
